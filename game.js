@@ -61,12 +61,13 @@ gamebox.forEach((box)=>{
         }
     })
 })
+let drawtext=document.querySelector(".Draw-text");
 let gameDraw=()=>{
-    winnerText.innerText="Match Draw, Play Next Game";
-    winnerText.classList.remove("hide");
+    // winnerText.innerText="Match Draw, Play Next Game";
+    drawtext.classList.remove("hide");
     resetbtn.style.pointerEvents="none"
     resetbtn.ariaDisabled=true;
-    winnerText.classList.add("winner-text2")
+    drawtext.classList.add("winner-text2");
 }
 const winner=(val)=>{
     if(val==="X"){
@@ -82,8 +83,6 @@ const winner=(val)=>{
     img.classList.remove("hide");
     resetbtn.style.pointerEvents="none";
     resetbtn.ariaDisabled=true;
-
-    count=0;
     disabled();
 
 }
@@ -92,10 +91,11 @@ let resetfunc=()=>{
         box.innerText="";
         enabled();
         box.style.backgroundColor="";
-        winnerText.classList.add("hide")
+    }
+        winnerText.classList.add("hide");
+        drawtext.classList.add("hide");
         img.classList.add("hide");
         count=0;
-    }
 }
 let newGame=()=>{
     for(let box of gamebox){
@@ -103,6 +103,7 @@ let newGame=()=>{
         enabled();
         box.style.backgroundColor="";
         winnerText.classList.add("hide");
+        drawtext.classList.add("hide");
         img.classList.add("hide");
         span.classList.remove("O");
         span.classList.remove("X");
@@ -110,6 +111,7 @@ let newGame=()=>{
         resetbtn.style.pointerEvents="";
         resetbtn.ariaDisabled=false;
     }
+    
 }
 let enabled=()=>{
     for(let box of gamebox){
@@ -137,6 +139,7 @@ const checkWinner=()=>{
             }
         }
     }
+    return false;
 }
 
 resetbtn.addEventListener("click",resetfunc);

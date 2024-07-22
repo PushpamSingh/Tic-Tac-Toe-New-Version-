@@ -8,6 +8,12 @@
 body{
     background-color: #2e2e2e;
 }
+.turn-container h1{
+    color: rgb(248, 0, 0);
+    font-size: 30px;
+    text-decoration: underline;
+    margin-bottom: 1rem;
+}
 .rule-btn{
     /* padding: 0.7rem; */
     border: transparent;
@@ -34,15 +40,19 @@ body{
     display: grid;
     grid-template-columns: 1fr 1fr;
     place-content: center;
-    margin: 2.5vh auto;
+    margin: 1vh auto;
     position: relative;
 
 }
 .turn-container h3{
     grid-column-start: 1;
     grid-column-end: 3;
-    color: rgb(255, 0, 0);
+    color: rgb(204, 255, 0);
     font-size: 30px;
+}
+.turn-container h1{
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
 .turn-x{
     border: 4px solid #898383;
@@ -117,9 +127,10 @@ body{
     grid-column-end: 2;
     font-size: 25px;
     color: rgb(27, 206, 3);
-    line-height: 4rem;
+    line-height: 3rem;
 }
 .winner-text2{
+    color: rgb(0, 255, 183);
     line-height: normal;
     font-size: 22px;
     grid-column-start: 1;
@@ -173,6 +184,7 @@ body{
 }
 img{
     background: none;
+
 }
 .winner-page a{
     text-decoration: none;
