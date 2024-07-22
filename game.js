@@ -104,6 +104,8 @@ let newGame=()=>{
         box.style.backgroundColor="";
         winnerText.classList.add("hide");
         img.classList.add("hide");
+        span.classList.remove("O");
+        span.classList.remove("X");
         count=0;
         resetbtn.style.pointerEvents="";
         resetbtn.ariaDisabled=false;
