@@ -28,7 +28,6 @@ let winPattern=[
 
 gamebox.forEach((box)=>{
     box.addEventListener("click",()=>{
-        console.log("button was clicked");
         if(turnX===true){
             box.innerText="X";
             box.style.backgroundColor="rgb(206, 112, 35)";
