@@ -90,8 +90,8 @@ body{
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(3,1fr);
     /* border: 2px solid rgb(7, 7, 7); */
-    width: 350px;
-    height: 350px;
+    width: 320px;
+    height: 320px;
     margin: 2vh auto;
     text-align: center;
     gap: 0.4rem;
